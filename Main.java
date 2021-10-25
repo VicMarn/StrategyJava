@@ -13,31 +13,17 @@ public class Main {
         switch(calculationChoice){
             case 1:
                 MediaAritmetica calcMediaA = new MediaAritmetica();
-                System.out.println("\n-------------------------------------\n");
-                System.out.println("Digite o nome do aluno:");
-                d.setNome(scan.nextLine());
-                System.out.println("\nDigite a nota da P1:");
-                d.setP1(scan.nextFloat());
-                System.out.println("\nDigite a nota da P2:");
-                d.setP2(scan.nextFloat());
+                d.defineAluno();
                 calcMediaA.calculaMedia(d);
                 calcMediaA.mudaSituacao(d);
-                System.out.println("O aluno " + d.getNome() + " teve média " + d.getMedia() +
-                        " e foi " + d.getSituacao());
+                d.imprime();
                 break;
             case 2:
                 MediaGeometrica calcMediaG = new MediaGeometrica();
-                System.out.println("-------------------------------------\n");
-                System.out.println("Digite o nome do aluno:");
-                d.setNome(scan.nextLine());
-                System.out.println("\nDigite a nota da P1:");
-                d.setP1(scan.nextFloat());
-                System.out.println("\nDigite a nota da P2:");
-                d.setP2(scan.nextFloat());
+                d.defineAluno();
                 calcMediaG.calculaMedia(d);
                 calcMediaG.mudaSituacao(d);
-                System.out.println("O aluno " + d.getNome() + " teve média " + d.getMedia() +
-                        " e foi " + d.getSituacao());
+                d.imprime();
                 break;
             default:
                 System.out.println("Opção inválida");
