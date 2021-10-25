@@ -8,8 +8,6 @@ public class Disciplina {
     private float media;
     private String situacao;
     private String nome;
-    ICalcMedia calculo;
-    IMudaSituacao ajuste;
     Scanner scan = new Scanner(System.in);
 
     public void defineAluno(){
@@ -65,22 +63,9 @@ public class Disciplina {
         return media;
     }
 
-    public void setCalculo(ICalcMedia calculo) {
-        this.calculo = calculo;
-    }
-
-    public void setAjuste(IMudaSituacao ajuste) {
-        this.ajuste = ajuste;
-    }
-
     public Disciplina()
     {
 
     }
 
-    public Disciplina(ICalcMedia calculo ,IMudaSituacao ajuste)
-    {
-        this.ajuste = ajuste;
-        this.calculo = calculo;
-    }
 }
