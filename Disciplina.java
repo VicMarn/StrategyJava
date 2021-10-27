@@ -8,6 +8,8 @@ public class Disciplina {
     private float media;
     private String situacao;
     private String nome;
+    ICalcMedia calculo;
+    IMudaSituacao  ajuste;
     Scanner scan = new Scanner(System.in);
 
     public void defineAluno(){
@@ -19,10 +21,12 @@ public class Disciplina {
         System.out.println("\nDigite a nota da P2:");
         this.p2=scan.nextFloat();
     }
+
     public void imprime(){
         System.out.println("O aluno " + this.nome + " teve média " + this.media +
                 " e foi " + this.situacao);
     }
+
     public float getP1() {
         return p1;
     }
@@ -63,9 +67,12 @@ public class Disciplina {
         return media;
     }
 
-    public Disciplina()
-    {
+    public Disciplina() {
 
     }
 
+    public Disciplina(ICalcMedia calculo, IMudaSituacao ajuste){
+        this.calculo=calculo;
+        this.ajuste=ajuste;
+    }
 }
